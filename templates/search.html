@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head> <title> Search page </title></head>
+<body>
+<form method="post" action="">
+<input name="isbn" placeholder="isbn" type="text" />
+<input name="title" placeholder="title" type="text" />
+<input name="author" placholder="author" type="text" />
+<button> Search </button>
+</form>
+{% for item in books %}
+	<a href="{{url_for("book", **{"isbn":item.isbn}) }}"> {{ item.title }} </a> <br/>
+{% endfor %}
+</body>
+</html>
