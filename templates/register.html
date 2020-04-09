@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-
-<html>
-<head>
-<title> User registeration page</title>
-</head>
-
-<body>
+{% extends "layout.html" %}
+{%block content%}
 <form action="{{ url_for("register") }}" method="POST">
 <input name="username" placeholder="Username" type="text" />
 <input name="password" placeholder="Password" type="password" />
-<button> submit </button>
+<button> register </button>
 </form>
-</body>
-</html>
+{%endblock%}
